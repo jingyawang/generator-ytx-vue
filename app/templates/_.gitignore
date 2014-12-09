@@ -1,0 +1,9 @@
+node_modules
+tmp
+build
+release
+bower_components
+!gulp/**/*
+!app/styles/*.css
+!gulpfile.js
+!.bowerrc
