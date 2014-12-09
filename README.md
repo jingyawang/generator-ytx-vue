@@ -35,6 +35,17 @@ Finally, initiate the generator:
 yo ytx-vue
 ```
 
+For develop mode, run:
+```bash
+gulp
+```
+
+For Release mode, run:
+```bash
+gulp --release
+```
+
+
 ### Getting To Know Yeoman
 
 Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
