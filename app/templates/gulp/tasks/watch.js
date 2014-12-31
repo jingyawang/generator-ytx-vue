@@ -10,7 +10,7 @@ module.exports = gulp.task('watch', function () {
     livereloadServer.changed(file.path);
   });
 
-  watch({ glob: [config.paths.src.scripts]}, ['lint']);
+  // watch({ glob: [config.paths.src.scripts]}, ['lint']);
   watch({ glob: [config.paths.src.index]}, ['index']);
   watch({ glob: [config.paths.src.stylesGlob]}, ['styles']);
   watch({ glob: [config.paths.src.images] }, ['images']);

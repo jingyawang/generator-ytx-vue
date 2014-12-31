@@ -10,7 +10,7 @@ var vueify = require('vueify');
 module.exports = gulp.task('browserify', function () {
   return browserify({
       entries: [config.paths.src.modules],
-      extensions: ['.coffee']
+      extensions: ['.js', '.coffee', '.vue']
     })
     .transform(coffeeify)
     .transform(browserifyShim)

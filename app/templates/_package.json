@@ -4,7 +4,9 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {},
+  "scripts": {
+    "install": "ln -fns ../app/scripts/config node_modules"
+  },
   "devDependencies": {
   	"browserify": "^7.0.0",
     "browserify-shim": "^3.6.0",
@@ -33,7 +35,10 @@
     "vue": "^0.11.4",
     "vueify": "^1.1.0",
     "watchify": "^0.10.2",
-    "yargs": "^1.2.2"
+    "yargs": "^1.2.2",
+    "weixin-common": "git+ssh://git@www.abc.com:jingya.wang/weixin-service-common.git#0.1.0",
+
+    "wechatApi": "git+ssh://git@github.com:baidao/wx_api.git#v0.0.4"
   },
   "browser": {
     "zepto": "./bower_components/zepto/zepto.js"

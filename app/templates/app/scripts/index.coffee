@@ -9,6 +9,7 @@ Vue = require 'vue'
 appView = new Vue
   el: document.body
   data:
-    currentView: 'main'
+    currentView: 'loading'
   components:
-    'main': require './components/main/layout.vue'
+    'loading': require './components/loading'
+    'c-share': require 'weixin-common/components/share'

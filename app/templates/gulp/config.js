@@ -36,11 +36,11 @@ global.config = {
   },
   filenames: {
     build: {
-      styles: 'bundle.css',
+      styles: 'styles/bundle.css',
       scripts: 'bundle.js'
     },
     release: {
-      styles: 'bundle.min.css',
+      styles: 'styles/bundle.min.css',
       scripts: 'bundle.min.js'
     }
   },

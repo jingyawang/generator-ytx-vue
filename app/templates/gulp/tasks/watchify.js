@@ -10,7 +10,7 @@ var vueify = require('vueify');
 module.exports = gulp.task('watchify', function () {
   var bundler = watchify({
     entries: [config.paths.src.modules],
-    extensions: ['.coffee']
+    extensions: ['.js', '.coffee', '.vue']
   });
 
   

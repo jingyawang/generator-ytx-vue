@@ -3,7 +3,7 @@ tmp
 build
 release
 bower_components
-!gulp/**/*
+!gulp/**
 !app/styles/*.css
 !gulpfile.js
 !.bowerrc
