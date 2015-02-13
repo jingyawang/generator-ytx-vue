@@ -4,9 +4,22 @@ var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var replace = require('gulp-replace');
 var minifyHTML = require('gulp-minify-html');
+var fs = require('fs');
+var uglify = require('uglify-js');
+var templateAutofit, templateStatistics;
+
+if(release) {
+  templateAutofit = uglify.minify('./gulp/templates/autofit.js').code,
+  templateStatistics = uglify.minify('./gulp/templates/statistics.js').code;
+} else {
+  templateAutofit = fs.readFileSync('./gulp/templates/autofit.js', 'utf-8'),
+  templateStatistics = fs.readFileSync('./gulp/templates/statistics.js', 'utf-8');
+}
 
 module.exports = gulp.task('index', function () {
   return gulp.src(config.paths.src.index)
+    .pipe(replace('<!--百度统计-->', '<script>' + templateStatistics + '</script>'))
+    .pipe(replace('<!--自适应调整-->', '<script>' + templateAutofit + '</script>'))
     .pipe(gulpif(release, minifyHTML({comments: true, empty: true, spare: true, quotes: true})))
     .pipe(gulpif(release,
       replace('<!--styles-->', '<link href="' + config.filenames.release.styles + '" rel="stylesheet">'),
@@ -20,3 +33,6 @@ module.exports = gulp.task('index', function () {
       gulp.dest(config.paths.dest.release.index),
       gulp.dest(config.paths.dest.build.index)));
     });
+
+
+

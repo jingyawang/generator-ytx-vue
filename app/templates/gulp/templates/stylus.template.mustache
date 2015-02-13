@@ -1,0 +1,80 @@
+{
+  // Default options
+  'functions': true
+}
+
+//cress unit
+$rate_640 = 200 
+
+/*
+Stylus variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon_home_width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon_home = x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet = width height image $spritesheet_sprites;
+*/
+{{#items}}
+${{name}}_name = '{{name}}';
+${{name}}_x = ({{x}}/$rate_640)rem;
+${{name}}_y = ({{y}}/$rate_640)rem;
+${{name}}_offset_x = ({{offset_x}}/$rate_640)rem;
+${{name}}_offset_y = ({{offset_y}}/$rate_640)rem;
+${{name}}_width = ({{width}}/$rate_640)rem;
+${{name}}_height = ({{height}}/$rate_640)rem;
+${{name}}_total_width = ({{total_width}}/$rate_640)rem;
+${{name}}_total_height = ({{total_height}}/$rate_640)rem;
+${{name}}_image = '{{{escaped_image}}}';
+${{name}} = ({{x}}/$rate_640)rem ({{y}}/$rate_640)rem ({{offset_x}}/$rate_640)rem ({{offset_y}}/$rate_640)rem ({{width}}/$rate_640)rem ({{height}}/$rate_640)rem ({{total_width}}/$rate_640)rem ({{total_height}}/$rate_640)rem '{{{escaped_image}}}' '{{name}}';
+{{/items}}
+${{spritesheet_name}}_width = ({{spritesheet.width}}/$rate_640)rem;
+${{spritesheet_name}}_height = ({{spritesheet.height}}/$rate_640)rem;
+${{spritesheet_name}}_image = '{{{spritesheet.escaped_image}}}';
+${{spritesheet_name}}_sprites ={{#items}} ${{name}}{{/items}};
+${{spritesheet_name}} = ({{spritesheet.width}}/$rate_640)rem ({{spritesheet.height}}/$rate_640)rem '{{{spritesheet.escaped_image}}}' ${{spritesheet_name}}_sprites;
+
+{{#options.functions}}
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  spriteWidth($icon_home)
+}
+
+.icon-email {
+  sprite($icon_email)
+}
+*/
+
+spriteWidth($sprite) 
+  width: $sprite[4]
+
+spriteHeight($sprite) 
+  height: $sprite[5]
+
+spriteBackground($sprite) 
+  background: url($sprite[8]) no-repeat $sprite[2] $sprite[3]
+
+spriteSize($sprite) 
+  background-size: $sprite[6] $sprite[7]
+
+sprite($sprite, args...) 
+  if args[0] and args[1]
+    rw = args[0]/$sprite[4]
+    rh = args[1]/$sprite[5]
+    background: url($sprite[8]) no-repeat $sprite[2]*rw $sprite[3]*rh
+    background-size: $sprite[6]*rw $sprite[7]*rh
+    width: args[0]
+    height: args[1]
+  else
+    spriteBackground($sprite)
+    spriteSize($sprite)
+    spriteWidth($sprite)
+    spriteHeight($sprite)
+
+{{/options.functions}}

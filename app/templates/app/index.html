@@ -11,41 +11,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!--styles-->
-
-  <!-- 自适应调整 -->
-  <!--   
-  <script>
-    document.documentElement.style.fontSize = 100 * innerWidth / 320 + 'px'
-    addEventListener('load', function() {
-      setTimeout(function(){
-         document.documentElement.style.fontSize = 100 * innerWidth / 320 + 'px' 
-         window.unit = 100 * innerWidth / 320;
-         var e = document.createEvent('Event');
-         e.initEvent('adjustReady', true, true);
-         window.dispatchEvent(e);
-      }, 480);
-    })
-    addEventListener('orientationchange', function() {
-        setTimeout(function(){
-          document.documentElement.style.fontSize = 100 * innerWidth / 320 + 'px'
-        }, 480)
-          
-    });
-  </script>
-  -->
-  
-  <!-- 百度统计 -->
-  <!--   
-    <script> 
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?25bb21c2a158f778074cefb68194b6b4";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-  -->
+  <!--自适应调整-->
+  <!--百度统计-->
 </head>
 <body>
   <div v-component="{{currentView}}"></div>

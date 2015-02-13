@@ -53,6 +53,18 @@ Yeoman has a heart of gold. He's a person with feelings and opinions, but he's v
 If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
 
 
+### Change Logs
+
+#### version 0.3.0 
+- add auto css sprites support
+- add 百度统计 and  自适应调整 injection, in order to make the html file more clean
+- use the powerful ***browser-sync*** to replace ***gulp-livereload*** and ***connect*** midmare
+- remove the  ***wechat-api*** package, which is now not supported by the current WECHAT JS SDK
+- replace ***gulp-csso*** with ***gulp-minify-css*** , since the former can not be customised
+- turn zepto package from npm to bower, so that it will be loaded more gracefully
+
+
+
 ## License
 
 MIT

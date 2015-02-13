@@ -1,7 +1,3 @@
-# require broswerify shim modules
-require 'zepto'
-
-
 # app entry
 
 Vue = require 'vue'

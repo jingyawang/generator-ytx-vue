@@ -8,7 +8,8 @@ global.config = {
     src: {
       index: SRC_FOLDER + '/index.html',
       assets: [SRC_FOLDER + '/fonts/**/*'],
-      images: SRC_FOLDER + '/images/**/*',
+      images: [SRC_FOLDER + '/images/**/*', '!' + SRC_FOLDER + '/images/**/*.png/**/*.{jpg,jpeg,png}'],
+      sprites: SRC_FOLDER + '/images/**/*.png/**/*.{jpg,jpeg,png}',
       scripts: SRC_FOLDER + '/scripts/**/*.coffee',
       styles: SRC_FOLDER + '/styles/main.styl',
       stylesGlob: SRC_FOLDER + '/styles/**/*.styl',
@@ -18,6 +19,7 @@ global.config = {
     dest: {
       build: {
         styles: BUILD_FOLDER,
+        cssSprites: SRC_FOLDER + '/styles/sprites',
         scripts: BUILD_FOLDER,
         images: BUILD_FOLDER + '/images',
         assets: BUILD_FOLDER + '/fonts',
@@ -26,6 +28,7 @@ global.config = {
       },
       release: {
         styles: RELEASE_FOLDER,
+        cssSprites: SRC_FOLDER + '/styles/sprites',
         scripts: RELEASE_FOLDER,
         images: RELEASE_FOLDER + '/images',
         assets: RELEASE_FOLDER + '/fonts',
@@ -46,6 +49,8 @@ global.config = {
   },
   ports: {
     staticServer: 9000,
+    uiServer: 8081,
+    weinre: 8080,
     livereloadServer: 35729
   }
 };

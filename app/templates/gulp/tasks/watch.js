@@ -1,18 +1,20 @@
 'use strict';
 
 var gulp = require('gulp');
-var watch = require('gulp-watch');
-var livereload = require('gulp-livereload');
-var livereloadServer = livereload(config.ports.livereloadServer);
+var browserSync = require('browser-sync');
+// var livereload = require('gulp-livereload');
 
 module.exports = gulp.task('watch', function () {
+  // livereload.listen({port: config.ports.livereloadServer});
   gulp.watch(config.paths.src.livereload).on('change', function (file) {
-    livereloadServer.changed(file.path);
+    // livereload.changed(file.path);
+    browserSync.reload(file.path);
   });
 
-  // watch({ glob: [config.paths.src.scripts]}, ['lint']);
-  watch({ glob: [config.paths.src.index]}, ['index']);
-  watch({ glob: [config.paths.src.stylesGlob]}, ['styles']);
-  watch({ glob: [config.paths.src.images] }, ['images']);
 
+  // gulp.watch([config.paths.src.scripts], ['lint']);
+  gulp.watch(config.paths.src.index, ['index']);
+  gulp.watch(config.paths.src.stylesGlob, ['styles']);
+  gulp.watch(config.paths.src.images, {nodir: true}, ['images']);
+  gulp.watch(config.paths.src.sprites, ['sprites']);
 });
