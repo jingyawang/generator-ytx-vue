@@ -29,14 +29,14 @@ ${{name}}_width = ({{width}}/$rate_640)rem;
 ${{name}}_height = ({{height}}/$rate_640)rem;
 ${{name}}_total_width = ({{total_width}}/$rate_640)rem;
 ${{name}}_total_height = ({{total_height}}/$rate_640)rem;
-${{name}}_image = '{{{escaped_image}}}';
-${{name}} = ({{x}}/$rate_640)rem ({{y}}/$rate_640)rem ({{offset_x}}/$rate_640)rem ({{offset_y}}/$rate_640)rem ({{width}}/$rate_640)rem ({{height}}/$rate_640)rem ({{total_width}}/$rate_640)rem ({{total_height}}/$rate_640)rem '{{{escaped_image}}}' '{{name}}';
+${{name}}_image = 'images/flags.png';
+${{name}} = ({{x}}/$rate_640)rem ({{y}}/$rate_640)rem ({{offset_x}}/$rate_640)rem ({{offset_y}}/$rate_640)rem ({{width}}/$rate_640)rem ({{height}}/$rate_640)rem ({{total_width}}/$rate_640)rem ({{total_height}}/$rate_640)rem 'images/flags.png' '{{name}}';
 {{/items}}
 ${{spritesheet_name}}_width = ({{spritesheet.width}}/$rate_640)rem;
 ${{spritesheet_name}}_height = ({{spritesheet.height}}/$rate_640)rem;
-${{spritesheet_name}}_image = '{{{spritesheet.escaped_image}}}';
+${{spritesheet_name}}_image = 'images/flags.png';
 ${{spritesheet_name}}_sprites ={{#items}} ${{name}}{{/items}};
-${{spritesheet_name}} = ({{spritesheet.width}}/$rate_640)rem ({{spritesheet.height}}/$rate_640)rem '{{{spritesheet.escaped_image}}}' ${{spritesheet_name}}_sprites;
+${{spritesheet_name}} = ({{spritesheet.width}}/$rate_640)rem ({{spritesheet.height}}/$rate_640)rem 'images/flags.png' ${{spritesheet_name}}_sprites;
 
 {{#options.functions}}
 /*
