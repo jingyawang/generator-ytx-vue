@@ -40,7 +40,7 @@ function generateSprite(files, directory) {
         cssName: name + '.styl',
         cssSpritesheetName: name,
         padding: 2,
-        imgPath: path.relative(config.paths.dest[release?'release':'build'].cssSprites , directory),
+        imgPath: path.relative(SRC_FOLDER , directory),
         cssTemplate: './gulp/templates/stylus.template.mustache'
       }));
 
