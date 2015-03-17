@@ -1,10 +1,10 @@
 # app entry
-require('weixin-common').configApp
-  defaultSid: "123"
-  defaultReffer: "123"
+# require('weixin-common').configApp
+#   defaultSid: "123"
+#   defaultReffer: "123"
 
 Vue = require 'vue'
-require 'weixin-common'
+# require 'weixin-common'
 
 appView = new Vue
   el: document.body

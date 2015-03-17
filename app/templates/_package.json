@@ -44,7 +44,7 @@
     "vueify": "^1.1.0",
     "watchify": "^2.3.0",
     "yargs": "^1.2.2",
-    "weixin-common": "git+ssh://git@www.abc.com:jingya.wang/weixin-service-common.git#0.2.0"
+    "weixin-common": "git+ssh://git@www.abc.com:jingya.wang/weixin-service-common.git#0.3.2"
   },
   "browserify-shim": {}
 }

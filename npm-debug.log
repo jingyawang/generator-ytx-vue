@@ -1,72 +1,172 @@
 0 info it worked if it ends with ok
 1 verbose cli [ '/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/node',
 1 verbose cli   '/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/npm',
-1 verbose cli   'unpublish',
-1 verbose cli   'generator-ytx-vue@1.0.2' ]
+1 verbose cli   'publish',
+1 verbose cli   '.',
+1 verbose cli   '--tag',
+1 verbose cli   '1.0.4' ]
 2 info using npm@1.4.9
 3 info using node@v0.10.28
-4 verbose url raw generator-ytx-vue?write=true
-5 verbose url resolving [ 'http://registry.npmjs.org/',
-5 verbose url resolving   './generator-ytx-vue?write=true' ]
-6 verbose url resolved http://registry.npmjs.org/generator-ytx-vue?write=true
-7 info trying registry request attempt 1 at 18:41:13
-8 http GET http://registry.npmjs.org/generator-ytx-vue?write=true
-9 http 200 http://registry.npmjs.org/generator-ytx-vue?write=true
-10 silly registry.get cb [ 200,
-10 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-10 silly registry.get     etag: '"CRBBP57GZUL42DXO77I7KQGXH"',
-10 silly registry.get     'content-type': 'application/json',
-10 silly registry.get     'cache-control': 'max-age=0',
-10 silly registry.get     'content-length': '16101',
-10 silly registry.get     'accept-ranges': 'bytes',
-10 silly registry.get     date: 'Wed, 04 Mar 2015 10:41:12 GMT',
-10 silly registry.get     via: '1.1 varnish',
-10 silly registry.get     age: '0',
-10 silly registry.get     connection: 'keep-alive',
-10 silly registry.get     'x-served-by': 'cache-hk91-HKG',
-10 silly registry.get     'x-cache': 'MISS',
-10 silly registry.get     'x-cache-hits': '0',
-10 silly registry.get     'x-timer': 'S1425465671.399212,VS0,VE680',
-10 silly registry.get     vary: 'Accept' } ]
-11 verbose unpublish removing attachments { shasum: 'c0843019dd2688e5265c622a4ed62ee6b6fbf31a',
-11 verbose unpublish   tarball: 'http://registry.npmjs.org/generator-ytx-vue/-/generator-ytx-vue-1.0.2.tgz' }
-12 verbose url raw generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14
-13 verbose url resolving [ 'http://registry.npmjs.org/',
-13 verbose url resolving   './generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14' ]
-14 verbose url resolved http://registry.npmjs.org/generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14
-15 info trying registry request attempt 1 at 18:41:14
-16 http PUT http://registry.npmjs.org/generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14
-17 http 403 http://registry.npmjs.org/generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14
-18 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-18 verbose headers   'content-type': 'application/json',
-18 verbose headers   'cache-control': 'max-age=60',
-18 verbose headers   'content-length': '70',
-18 verbose headers   'accept-ranges': 'bytes',
-18 verbose headers   date: 'Wed, 04 Mar 2015 10:41:13 GMT',
-18 verbose headers   via: '1.1 varnish',
-18 verbose headers   connection: 'keep-alive',
-18 verbose headers   'x-served-by': 'cache-hk93-HKG',
-18 verbose headers   'x-cache': 'MISS',
-18 verbose headers   'x-cache-hits': '0',
-18 verbose headers   'x-timer': 'S1425465672.363950,VS0,VE700' }
-19 error unpublish Failed to update data
-20 error Error: forbidden tag points to invalid version: 1.0.2: generator-ytx-vue/-rev/36-9b6c3495e08c0424c2e8403144110e14
-20 error     at RegClient.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
-20 error     at Request._callback (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
-20 error     at Request.self.callback (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:123:22)
-20 error     at Request.EventEmitter.emit (events.js:98:17)
-20 error     at Request.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:893:14)
-20 error     at Request.EventEmitter.emit (events.js:117:20)
-20 error     at IncomingMessage.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:844:12)
-20 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
-20 error     at _stream_readable.js:919:16
-20 error     at process._tickCallback (node.js:419:13)
-21 error If you need help, you may report this *entire* log,
-21 error including the npm and node versions, at:
-21 error     <http://github.com/npm/npm/issues>
-22 error System Darwin 12.5.0
-23 error command "/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/node" "/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/npm" "unpublish" "generator-ytx-vue@1.0.2"
-24 error cwd /Users/yasushiyasushimiyabitadashi/workspace/generator-ytx-vue
-25 error node -v v0.10.28
-26 error npm -v 1.4.9
-27 verbose exit [ 1, true ]
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/yasushiyasushimiyabitadashi/.npm/3a52ce78-.lock
+10 verbose tar pack [ '/var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz',
+10 verbose tar pack   '.' ]
+11 verbose tarball /var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+12 verbose folder .
+13 info prepublish generator-ytx-vue@1.0.4
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/yasushiyasushimiyabitadashi/.npm/1f1177db-tar.lock
+16 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+17 verbose lock tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz /Users/yasushiyasushimiyabitadashi/.npm/fe92b3d2-37057-0-6442724771331996-tmp-tgz.lock
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
+20 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+21 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+22 verbose tar unpack /var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+23 silly lockFile dcdfd49d--generator-ytx-vue-1-0-4-package tar:///Users/yasushiyasushimiyabitadashi/.npm/generator-ytx-vue/1.0.4/package
+24 verbose lock tar:///Users/yasushiyasushimiyabitadashi/.npm/generator-ytx-vue/1.0.4/package /Users/yasushiyasushimiyabitadashi/.npm/dcdfd49d--generator-ytx-vue-1-0-4-package.lock
+25 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+26 verbose lock tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz /Users/yasushiyasushimiyabitadashi/.npm/fe92b3d2-37057-0-6442724771331996-tmp-tgz.lock
+27 silly gunzTarPerm modes [ '755', '644' ]
+28 silly gunzTarPerm extractEntry package.json
+29 silly gunzTarPerm extractEntry README.md
+30 silly gunzTarPerm extractEntry app/index.js
+31 silly gunzTarPerm extractEntry app/templates/_gulpfile.js
+32 silly gunzTarPerm extractEntry app/templates/_.bowerrc
+33 silly gunzTarPerm extractEntry app/templates/_.gitignore
+34 silly gunzTarPerm extractEntry app/templates/_bower.json
+35 silly gunzTarPerm extractEntry app/templates/_coffeelint.json
+36 silly gunzTarPerm extractEntry app/templates/_package.json
+37 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Germany-Flag.png
+38 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Argentina-Flag.png
+39 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Belgium-Flag.png
+40 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Canada-Flag-256.png
+41 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/China-Flag.png
+42 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Denmark-Flag.png
+43 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/France-Flag.png
+44 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Austria-Flag.png
+45 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Hong-Kong-Flag.png
+46 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/India-Flag.png
+47 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Ireland-Flag.png
+48 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/Italy-Flag.png
+49 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/australia-Flag.png
+50 silly gunzTarPerm extractEntry app/templates/app/images/flags.png/jamaica-Flag.png
+51 silly gunzTarPerm extractEntry app/templates/app/index.html
+52 silly gunzTarPerm extractEntry app/templates/app/scripts/index.js
+53 silly gunzTarPerm extractEntry app/templates/app/scripts/common/services/index.coffee
+54 silly gunzTarPerm extractEntry app/templates/app/scripts/common/services/share.coffee
+55 silly gunzTarPerm extractEntry app/templates/app/scripts/components/loading.vue
+56 silly gunzTarPerm extractEntry app/templates/app/scripts/components/share.vue
+57 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/index.coffee
+58 silly gunzTarPerm extractEntry app/templates/app/scripts/directives/tongji.coffee
+59 silly gunzTarPerm extractEntry app/templates/app/scripts/index.coffee
+60 silly gunzTarPerm extractEntry app/templates/app/styles/common.styl
+61 silly gunzTarPerm extractEntry app/templates/app/styles/main.styl
+62 silly gunzTarPerm extractEntry app/templates/editorconfig
+63 silly gunzTarPerm extractEntry app/templates/gulp/config.js
+64 silly gunzTarPerm extractEntry app/templates/gulp/index.js
+65 silly gunzTarPerm extractEntry app/templates/gulp/tasks/assets.js
+66 silly gunzTarPerm extractEntry app/templates/gulp/tasks/default.js
+67 silly gunzTarPerm extractEntry app/templates/gulp/tasks/images.js
+68 silly gunzTarPerm extractEntry app/templates/gulp/tasks/index.js
+69 silly gunzTarPerm extractEntry app/templates/gulp/tasks/clean.js
+70 silly gunzTarPerm extractEntry app/templates/gulp/tasks/minify.js
+71 silly gunzTarPerm extractEntry app/templates/gulp/tasks/serve.js
+72 silly gunzTarPerm extractEntry app/templates/gulp/tasks/sprites.js
+73 silly gunzTarPerm extractEntry app/templates/gulp/tasks/styles.js
+74 silly gunzTarPerm extractEntry app/templates/gulp/tasks/watch.js
+75 silly gunzTarPerm extractEntry app/templates/gulp/tasks/browserify.js
+76 silly gunzTarPerm extractEntry app/templates/gulp/tasks/watchify.js
+77 silly gunzTarPerm extractEntry app/templates/gulp/tasks/lint.js
+78 silly gunzTarPerm extractEntry app/templates/gulp/templates/autofit.js
+79 silly gunzTarPerm extractEntry app/templates/gulp/templates/statistics.js
+80 silly gunzTarPerm extractEntry app/templates/gulp/templates/stylus.template.mustache
+81 silly gunzTarPerm extractEntry app/templates/jshintrc
+82 silly lockFile dcdfd49d--generator-ytx-vue-1-0-4-package tar:///Users/yasushiyasushimiyabitadashi/.npm/generator-ytx-vue/1.0.4/package
+83 silly lockFile dcdfd49d--generator-ytx-vue-1-0-4-package tar:///Users/yasushiyasushimiyabitadashi/.npm/generator-ytx-vue/1.0.4/package
+84 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+85 silly lockFile fe92b3d2-37057-0-6442724771331996-tmp-tgz tar:///var/folders/73/jp592hms6flgdt8vt93vm50h0000gn/T/npm-15301-yzL7l_hT/1426588537057-0.6442724771331996/tmp.tgz
+86 silly lockFile 3a52ce78- .
+87 silly lockFile 3a52ce78- .
+88 silly publish { name: 'generator-ytx-vue',
+88 silly publish   version: '1.0.4',
+88 silly publish   description: 'Yeoman generator',
+88 silly publish   license: 'MIT',
+88 silly publish   main: 'app/index.js',
+88 silly publish   repository:
+88 silly publish    { type: 'git',
+88 silly publish      url: 'git://github.com/jingyawang/generator-ytx-vue' },
+88 silly publish   author: { url: 'https://github.com/jingyawang' },
+88 silly publish   engines: { node: '>=0.10.0' },
+88 silly publish   scripts: { test: 'mocha' },
+88 silly publish   files: [ 'app' ],
+88 silly publish   keywords: [ 'yeoman-generator' ],
+88 silly publish   dependencies:
+88 silly publish    { 'yeoman-generator': '^0.18.0',
+88 silly publish      chalk: '^1.0.0',
+88 silly publish      yosay: '^0.3.0' },
+88 silly publish   devDependencies: { mocha: '*' },
+88 silly publish   peerDependencies: { yo: '>=1.0.0' },
+88 silly publish   readme: '# generator-ytx-vue [![Build Status](https://secure.travis-ci.org/jingyawang/generator-ytx-vue.png?branch=master)](https://travis-ci.org/jingyawang/generator-ytx-vue)\n\n> [Yeoman](http://yeoman.io) generator\n\n\n## Getting Started\n\n### What is Yeoman?\n\nTrick question. It\'s not a thing. It\'s this guy:\n\n![](http://i.imgur.com/JHaAlBJ.png)\n\nBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\n\nNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\n\n```bash\nnpm install -g yo\n```\n\n### Yeoman Generators\n\nYeoman travels light. He didn\'t pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\n\nTo install generator-ytx-vue from npm, run:\n\n```bash\nnpm install -g generator-ytx-vue\n```\n\nFinally, initiate the generator:\n\n```bash\nyo ytx-vue\n```\n\nFor develop mode, run:\n```bash\ngulp\n```\n\nFor Release mode, run:\n```bash\ngulp --release\n```\n\n\n### Getting To Know Yeoman\n\nYeoman has a heart of gold. He\'s a person with feelings and opinions, but he\'s very easy to work with. If you think he\'s too opinionated, he can be easily convinced.\n\nIf you\'d like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\n\n\n### Change Logs\n\n#### version 0.3.0 \n- add auto css sprites support\n- add 百度统计 and  自适应调整 injection, in order to make the html file more clean\n- use the powerful ***browser-sync*** to replace ***gulp-livereload*** and ***connect*** midmare\n- remove the  ***wechat-api*** package, which is now not supported by the current WECHAT JS SDK\n- replace ***gulp-csso*** with ***gulp-minify-css*** , since the former can not be customised\n- turn zepto package from npm to bower, so that it will be loaded more gracefully\n\n\n\n## License\n\nMIT\n',
+88 silly publish   readmeFilename: 'README.md',
+88 silly publish   bugs: { url: 'https://github.com/jingyawang/generator-ytx-vue/issues' },
+88 silly publish   homepage: 'https://github.com/jingyawang/generator-ytx-vue',
+88 silly publish   _id: 'generator-ytx-vue@1.0.4',
+88 silly publish   _shasum: '0e0a550998ef9eb53e309ec09be7d8fd77dd3f50',
+88 silly publish   _from: '.' }
+89 verbose url raw generator-ytx-vue
+90 verbose url resolving [ 'http://registry.npmjs.org/', './generator-ytx-vue' ]
+91 verbose url resolved http://registry.npmjs.org/generator-ytx-vue
+92 info trying registry request attempt 1 at 18:35:38
+93 http PUT http://registry.npmjs.org/generator-ytx-vue
+94 http 403 http://registry.npmjs.org/generator-ytx-vue
+95 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+95 verbose headers   'content-type': 'application/json',
+95 verbose headers   'cache-control': 'max-age=60',
+95 verbose headers   'content-length': '5194',
+95 verbose headers   'accept-ranges': 'bytes',
+95 verbose headers   date: 'Tue, 17 Mar 2015 10:35:37 GMT',
+95 verbose headers   via: '1.1 varnish',
+95 verbose headers   connection: 'keep-alive',
+95 verbose headers   'x-served-by': 'cache-hkg6821-HKG',
+95 verbose headers   'x-cache': 'MISS',
+95 verbose headers   'x-cache-hits': '0',
+95 verbose headers   'x-timer': 'S1426588535.795848,VS0,VE1811' }
+96 error publish Failed PUT 403
+97 error Error: forbidden cannot modify pre-existing version: 1.0.4
+97 error old={"name":"generator-ytx-vue","version":"1.0.4","description":"Yeoman generator","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"git://github.com/jingyawang/generator-ytx-vue"},"author":{"url":"https://github.com/jingyawang"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["app"],"keywords":["yeoman-generator"],"dependencies":{"yeoman-generator":"^0.18.0","chalk":"^1.0.0","yosay":"^0.3.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"bugs":{"url":"https://github.com/jingyawang/generator-ytx-vue/issues"},"homepage":"https://github.com/jingyawang/generator-ytx-vue","_id":"generator-ytx-vue@1.0.4","_shasum":"05cdb366e34082d4a4731e2fe9533b068f83c5b1","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"surpery","email":"jingya_wang@yeah.net"},"maintainers":[{"name":"surpery","email":"jingya_wang@yeah.net"},{"name":"xinchaobeta","email":"xinchaobeta@hotmail.com"}],"dist":{"shasum":"05cdb366e34082d4a4731e2fe9533b068f83c5b1","tarball":"http://registry.npmjs.org/generator-ytx-vue/-/generator-ytx-vue-1.0.4.tgz"}}
+97 error new={"name":"generator-ytx-vue","version":"1.0.4","description":"Yeoman generator","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"git://github.com/jingyawang/generator-ytx-vue"},"author":{"url":"https://github.com/jingyawang"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["app"],"keywords":["yeoman-generator"],"dependencies":{"yeoman-generator":"^0.18.0","chalk":"^1.0.0","yosay":"^0.3.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"readme":"# generator-ytx-vue [![Build Status](https://secure.travis-ci.org/jingyawang/generator-ytx-vue.png?branch=master)](https://travis-ci.org/jingyawang/generator-ytx-vue)\u000a\u000a> [Yeoman](http://yeoman.io) generator\u000a\u000a\u000a## Getting Started\u000a\u000a### What is Yeoman?\u000a\u000aTrick question. It's not a thing. It's this guy:\u000a\u000a![](http://i.imgur.com/JHaAlBJ.png)\u000a\u000aBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\u000a\u000aNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\u000a\u000a```bash\u000anpm install -g yo\u000a```\u000a\u000a### Yeoman Generators\u000a\u000aYeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\u000a\u000aTo install generator-ytx-vue from npm, run:\u000a\u000a```bash\u000anpm install -g generator-ytx-vue\u000a```\u000a\u000aFinally, initiate the generator:\u000a\u000a```bash\u000ayo ytx-vue\u000a```\u000a\u000aFor develop mode, run:\u000a```bash\u000agulp\u000a```\u000a\u000aFor Release mode, run:\u000a```bash\u000agulp --release\u000a```\u000a\u000a\u000a### Getting To Know Yeoman\u000a\u000aYeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.\u000a\u000aIf you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\u000a\u000a\u000a### Change Logs\u000a\u000a#### version 0.3.0 \u000a- add auto css sprites support\u000a- add 百度统计 and  自适应调整 injection, in order to make the html file more clean\u000a- use the powerful ***browser-sync*** to replace ***gulp-livereload*** and ***connect*** midmare\u000a- remove the  ***wechat-api*** package, which is now not supported by the current WECHAT JS SDK\u000a- replace ***gulp-csso*** with ***gulp-minify-css*** , since the former can not be customised\u000a- turn zepto package from npm to bower, so that it will be loaded more gracefully\u000a\u000a\u000a\u000a## License\u000a\u000aMIT\u000a","readmeFilename":"README.md","bugs":{"url":"https://github.com/jingyawang/generator-ytx-vue/issues"},"homepage":"https://github.com/jingyawang/generator-ytx-vue","_id":"generator-ytx-vue@1.0.4","_shasum":"0e0a550998ef9eb53e309ec09be7d8fd77dd3f50","_from":".","_npmVersion":"1.4.9","_npmUser":{"name":"surpery","email":"jingya_wang@yeah.net"},"maintainers":[{"name":"surpery","email":"jingya_wang@yeah.net"}],"dist":{"shasum":"0e0a550998ef9eb53e309ec09be7d8fd77dd3f50","tarball":"http://registry.npmjs.org/generator-ytx-vue/-/generator-ytx-vue-1.0.4.tgz"}}: generator-ytx-vue
+97 error     at RegClient.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:273:14)
+97 error     at Request._callback (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:211:65)
+97 error     at Request.self.callback (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:123:22)
+97 error     at Request.EventEmitter.emit (events.js:98:17)
+97 error     at Request.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:893:14)
+97 error     at Request.EventEmitter.emit (events.js:117:20)
+97 error     at IncomingMessage.<anonymous> (/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/lib/node_modules/npm/node_modules/request/request.js:844:12)
+97 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+97 error     at _stream_readable.js:919:16
+97 error     at process._tickCallback (node.js:419:13)
+98 error If you need help, you may report this *entire* log,
+98 error including the npm and node versions, at:
+98 error     <http://github.com/npm/npm/issues>
+99 error System Darwin 12.5.0
+100 error command "/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/node" "/Users/yasushiyasushimiyabitadashi/.nvm/v0.10.28/bin/npm" "publish" "." "--tag" "1.0.4"
+101 error cwd /Users/yasushiyasushimiyabitadashi/workspace/generator-ytx-vue
+102 error node -v v0.10.28
+103 error npm -v 1.4.9
+104 verbose exit [ 1, true ]
