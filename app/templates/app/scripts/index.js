@@ -3,6 +3,8 @@ var Vue, appView;
 
 Vue = require('vue');
 
+require('weixin-common');
+
 appView = new Vue({
   el: document.body,
   data: {
