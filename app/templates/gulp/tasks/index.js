@@ -7,6 +7,7 @@ var minifyHTML = require('gulp-minify-html');
 var fs = require('fs');
 var uglify = require('uglify-js');
 var templateAutofit, templateStatistics;
+var preprocess = require('gulp-preprocess');
 
 if(release) {
   templateAutofit = uglify.minify('./gulp/templates/autofit.js').code,
@@ -26,13 +27,10 @@ module.exports = gulp.task('index', function () {
       replace('<!--styles-->', '<link href="' + config.filenames.build.styles + '" rel="stylesheet">')
     ))
     .pipe(gulpif(release,
-      replace('<!--scripts-->', '<script src="' + config.filenames.release.scripts + '"></script>'),
-      replace('<!--scripts-->', '<script src="' + config.filenames.build.scripts + '"></script>')
+      replace('<!--scripts-->', '<script src="http://cdn.staticfile.org/lodash.js/3.10.1/lodash.min.js"></script><script src="' + config.filenames.release.lib + '"></script><script src="' + config.filenames.release.scripts + '"></script>'),
+      replace('<!--scripts-->', '<script src="http://cdn.staticfile.org/lodash.js/3.10.1/lodash.min.js"></script><script src="' + config.filenames.build.lib + '"></script><script src="' + config.filenames.build.scripts + '"></script>')
     ))
     .pipe(gulpif(release,
       gulp.dest(config.paths.dest.release.index),
       gulp.dest(config.paths.dest.build.index)));
     });
-
-
-

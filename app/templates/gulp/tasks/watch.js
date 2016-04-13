@@ -16,5 +16,5 @@ module.exports = gulp.task('watch', function () {
   gulp.watch(config.paths.src.index, ['index']);
   gulp.watch(config.paths.src.stylesGlob, ['styles']);
   gulp.watch(config.paths.src.images, {nodir: true}, ['images']);
-  gulp.watch(config.paths.src.sprites, ['sprites']);
+  // gulp.watch(config.paths.src.sprites, ['sprites']);
 });

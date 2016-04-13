@@ -2,7 +2,7 @@
   "name": "package",
   "version": "0.0.0",
   "dependencies": {
-  	"zepto": "~1.1.4",
+  	"zepto": "*",
     "wx-signature": "git@gitlab.baidao.com:jingya.wang/wx-signature.git"
   }
 }

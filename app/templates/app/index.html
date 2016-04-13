@@ -15,8 +15,7 @@
   <!--百度统计-->
 </head>
 <body>
-  <div v-component="{{currentView}}"></div>
-  <c-share src="images/sharebg.png"></c-share>
+  <component :is="currentView"></component>
   <!--scripts-->
 </body>
 </html>

@@ -9,7 +9,7 @@ var stylus = require('gulp-stylus');
 
 module.exports = gulp.task('styles', function () {
   return gulp.src(config.paths.src.styles)
-    .pipe(stylus({'include css': true})) //css file require
+    .pipe(stylus({'include css': true}))
     .pipe(autoprefixer({
       browsers: ['Android >= 4', 'iOS >= 6', 'last 2 versions'],
       remove: false

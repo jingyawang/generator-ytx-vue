@@ -7,17 +7,26 @@ module.exports = gulp.task('default', function () {
   if (release) {
     runSequence(
       'clean',
-      ['index', 'sprites', 'styles', 'images', 'assets'],
       'browserify',
-      serve ? ['minify', 'serve'] : ['minify']
+      'index', 
+      'styles', 
+      'images', 
+      'assets',
+      'minify',
+      'manifest'
     );
   } else {
     runSequence(
       'clean',
-      ['index', 'sprites', 'styles', 'images', 'assets'],
-      ['watchify', 'watch', 'serve']
+      'index', 
+      'styles', 
+      'images', 
+      'assets',
+      'watchify', 
+      'watch', 
+      'serve',
+      'minify',
+      'manifest'
     );
   }
 });
-
-

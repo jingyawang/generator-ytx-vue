@@ -9,7 +9,7 @@ global.config = {
       index: SRC_FOLDER + '/index.html',
       assets: [SRC_FOLDER + '/fonts/**/*'],
       images: [SRC_FOLDER + '/images/**/*', '!' + SRC_FOLDER + '/images/**/*.png/**/*.{jpg,jpeg,png}'],
-      sprites: SRC_FOLDER + '/images/**/*.png/**/*.{jpg,jpeg,png}',
+      // sprites: SRC_FOLDER + '/images/**/*.png/**/*.{jpg,jpeg,png}',
       scripts: SRC_FOLDER + '/scripts/**/*.coffee',
       styles: SRC_FOLDER + '/styles/main.styl',
       stylesGlob: SRC_FOLDER + '/styles/**/*.styl',
@@ -19,7 +19,7 @@ global.config = {
     dest: {
       build: {
         styles: BUILD_FOLDER,
-        cssSprites: SRC_FOLDER + '/styles/sprites',
+        // cssSprites: SRC_FOLDER + '/styles/sprites',
         scripts: BUILD_FOLDER,
         images: BUILD_FOLDER + '/images',
         assets: BUILD_FOLDER + '/fonts',
@@ -28,7 +28,7 @@ global.config = {
       },
       release: {
         styles: RELEASE_FOLDER,
-        cssSprites: SRC_FOLDER + '/styles/sprites',
+        // cssSprites: SRC_FOLDER + '/styles/sprites',
         scripts: RELEASE_FOLDER,
         images: RELEASE_FOLDER + '/images',
         assets: RELEASE_FOLDER + '/fonts',
@@ -40,11 +40,13 @@ global.config = {
   filenames: {
     build: {
       styles: 'styles/bundle.css',
-      scripts: 'bundle.js'
+      scripts: 'bundle.js',
+      lib : 'lib.js'
     },
     release: {
       styles: 'styles/bundle.min.css',
-      scripts: 'bundle.min.js'
+      scripts: 'bundle.min.js',
+      lib : 'lib.min.js'
     }
   },
   ports: {

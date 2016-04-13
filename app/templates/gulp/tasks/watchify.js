@@ -28,10 +28,15 @@ module.exports = gulp.task('watchify', function () {
   gulp.watch('bower.json', rebundle);
 
   function rebundle() {
-    return bower2stream()
-      .append(bundler.bundle())
+    combine.create()
+      .append(bundler.bundle()).on('error',function(data){
+        console.log(data)
+      })
       .pipe(source(config.filenames.build.scripts))
       .pipe(gulp.dest(config.paths.dest.build.scripts));
+      
+    bower2stream()
+     // gulp.src(config.paths.dest.build+'bundle.js').pipe(uglify()).pipe(gulp.dest(config.paths.dest.build.scripts))
   }
 
   function bower2stream() {
@@ -39,8 +44,9 @@ module.exports = gulp.task('watchify', function () {
     bowermain().forEach(function(path){
       stream.append(fs.createReadStream(path));
     });
-    return stream;
+    return stream.pipe(source(config.filenames.build.lib)).pipe(gulp.dest(config.paths.dest.build.scripts));
   }
+
 
   return rebundle();
 });

@@ -13,6 +13,7 @@ var envify = require('envify/custom');
 
 module.exports = gulp.task('browserify', function () {
   var stream = combine.create();
+ 
   var bundle = browserify({
         entries: [config.paths.src.modules],
         extensions: ['.js', '.coffee', '.vue']
@@ -22,14 +23,18 @@ module.exports = gulp.task('browserify', function () {
       .transform(vueify)
       .transform(envify({_: 'purge'}))
       .bundle();
-  
+
   bowermain().forEach(function(path){
     stream.append(fs.createReadStream(path));
   });
+  console.log(bowermain());
+  console.log("!!!!!!!!!!!!!!!!!!")
+  stream.pipe(source(config.filenames.release.lib))
+  .pipe(gulp.dest(RELEASE_FOLDER));
 
-  stream
+  combine.create()
     .append(bundle)
     .pipe(source(config.filenames.release.scripts))
-    .pipe(gulp.dest(config.paths.dest.release.scripts));
+    .pipe(gulp.dest(RELEASE_FOLDER));
 
 });
